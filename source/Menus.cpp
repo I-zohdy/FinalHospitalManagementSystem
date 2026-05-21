@@ -56,9 +56,8 @@ int computeNextSlotId(Admin& admin)
     return maxId + 1;
 }
 
-// ================================================================
 //  SPECIALTY SEARCH + GUIDED BOOKING
-// ================================================================
+
 void searchAndBook(Admin& admin, Patient* patient,
                    Appointment* appts, int& apptCount, int& nextApptId) {
 

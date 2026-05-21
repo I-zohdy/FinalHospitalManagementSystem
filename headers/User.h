@@ -42,8 +42,8 @@ public:
     virtual void updateDetails() = 0;
 
     //pure virtual functions that load from files and save to files using the fstream library that will later be overridden by derived classes
-    virtual void loadFromFile(ifstream& in);
-    virtual void saveToFile(ofstream& out) const;
+    virtual void loadFromFile(ifstream& in) = 0;
+    virtual void saveToFile(ofstream& out) const = 0;
 };
 
 #endif
