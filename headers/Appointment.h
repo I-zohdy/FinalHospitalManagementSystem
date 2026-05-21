@@ -11,7 +11,7 @@ class Appointment
 {
 private:
     int id; //the appointment's id
-    string date; //the booking date
+    string date; //the appointment's scheduled date and time
     int doctorId; //the doctor's id
     int patientId; //the patient's id
     int slotId; //the slot's id

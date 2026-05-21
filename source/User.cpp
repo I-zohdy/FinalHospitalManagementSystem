@@ -60,6 +60,7 @@ bool User::checkPassword(const string& pass) const
     return password == pass;
 }
 
+
 //a function that loads the user's details from a file
 void User::loadFromFile(ifstream& in)
 {

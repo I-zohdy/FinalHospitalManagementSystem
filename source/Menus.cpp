@@ -113,7 +113,7 @@ void searchAndBook(Admin& admin, Patient* patient,
 
         s->setLatestID(nextApptId);
         appts[apptCount] = Appointment(nextApptId, docId,
-                                       patient->getID(), slotId, "");
+                                       patient->getID(), slotId, s->getTime());
         patient->setCurrentAppointment(&appts[apptCount]);
 
         cout << "Appointment booked! ID = " << nextApptId << "\n";
@@ -319,7 +319,7 @@ void doctorMenu(Admin& admin, Doctor* doctor,
             case 3: //add slot
             {
                 string slotTime;
-                cout << "Enter slot time (ex. 09:00 AM): ";
+                cout << "Enter slot date and time (ex. 23/08/2007 09:00 AM): ";
                 cin.ignore();
                 getline(cin, slotTime);
 
@@ -459,7 +459,7 @@ void patientMenu(Admin& admin, Patient* patient,
 
                 s->setLatestID(nextApptId);
                 appts[apptCount] = Appointment(nextApptId, docId,
-                                               patient->getID(), slotId, "");
+                                               patient->getID(), slotId, s->getTime());
                 patient->setCurrentAppointment(&appts[apptCount]);
 
                 cout << "Appointment booked! ID = " << nextApptId << "\n";
@@ -521,8 +521,6 @@ void patientMenu(Admin& admin, Patient* patient,
                             Slot* s = doc->findSlotByID(appts[i].getSlotId());
                             cout << "Doctor : " << doc->getName()
                                  << " (" << doc->getSpecialization() << ")\n";
-                            if (s) 
-                                cout << "Time   : " << s->getTime() << "\n";
                         }
                         found = true;
                     }

@@ -4,7 +4,6 @@
 using namespace std;
 
 int main() {
-
     //the admin object is constructed at the beginning because it owns the dynamically allocated arrays of doctors and patients
     Admin admin(0, "admin", "admin123");
 
@@ -135,6 +134,7 @@ int main() {
 
             default: cout << "Invalid choice.\n";
             }
+            throw "asdfasdf";
         }
         catch (const char* msg) 
         {

@@ -94,7 +94,7 @@ void Appointment::displayAppointmentInfo() const
 {
     cout << "------------------------------\n";
     cout << "Appointment ID : " << id        << "\n";
-    cout << "Date           : " << (date.empty() ? "N/A" : date) << "\n";
+    cout << "Date/Time      : " << (date.empty() ? "N/A" : date) << "\n";
     cout << "Doctor ID      : " << doctorId  << "\n";
     cout << "Patient ID     : " << patientId << "\n";
     cout << "Slot ID        : " << slotId    << "\n";

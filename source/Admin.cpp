@@ -32,7 +32,7 @@ Admin::~Admin()
     delete[] patients; //deleting the dynamically alloacted array of patients
 }
 
-//setters
+//getters
 Doctor* Admin::getDoctors() const
 {
     return doctors;
